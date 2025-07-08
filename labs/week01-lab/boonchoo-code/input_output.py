@@ -1,7 +1,7 @@
 # Exercise 1: Basic Input
 # Ask the user for their name and greet them
 print("=== Exercise 1: Basic Input ===")
-user_name = input("What is your name? ")
+user_name = input("What is your name?")
 print("Hello,", user_name, "!")
 print("Nice to meet you,", user_name)
 
