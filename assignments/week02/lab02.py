@@ -21,4 +21,4 @@ elif Chose == '2':
     money = money * 35.5 # USD to thai
     print(f"Currency can be converted = {money:.2f} Bath")
 else:
-    print("Error number Please Select again")
+    print("Error number Please Select Converter again ")
