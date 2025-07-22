@@ -10,10 +10,10 @@
 # Your code here:
 age = int(input("Enter age: "))
 if  0 <= age <= 12:
-    print(f"{age}:  Your are Child") 
-elif 13 <= age <19:
-    print(f"{age}:  Your are Teenager")
+    print(f"age = {age}:  Your are Child") 
+elif 13 <= age <=19:
+    print(f"age = {age}:  Your are Teenager")
 elif 20 <= age <=59:
-    print(f"{age}:  Your are adult")
+    print(f"age = {age}:  Your are adult")
 else:
-    print(f"{age}:  Your are Senior")
+    print(f"age = {age}:  Your are Senior")

@@ -35,12 +35,21 @@ if entered_pin == pin:
             print(f"balance = {balance} THB")
         elif(chose == 2):
             withdraw = float(input("How much money will you Withdraw?: "))
-            balance -= withdraw
-            print(f"Withdraw = {withdraw} THB")
+            if(withdraw >= 0):
+                if(balance >= withdraw):
+                    balance -= withdraw
+                    print(f"Withdraw = {withdraw} THB")
+                else:
+                    print("not enough money")
+            else:
+                print("The amount cannot be negative.")
         elif(chose == 3):
             Deposit = float(input("How much money will you deposit?: "))
-            balance += Deposit
-            print(f"Deposit = {Deposit} THB")
+            if(Deposit >= 0):
+                balance += Deposit
+                print(f"Deposit = {Deposit} THB")
+            else:
+                print("The amount cannot be negative.")
         elif(chose == 4):
             print("Exit")
             break
