@@ -39,11 +39,11 @@ print(fruits)  # ['pear', 'banana', 'cherry', 'orange', 'grape', 'kiwi', 'apple'
 fruits.remove("banana")          # Remove first occurrence
 print(fruits)  # ['pear', 'cherry', 'orange', 'grape', 'kiwi', 'apple']
 
-removed_fruit = fruits.pop()     # Remove and return last element
-print(f"Removed: {removed_fruit}")  # apple
+removed_fruit = fruits.pop()     # Remove and return last element ลบตัวขวาสุดออกไป
+print(f"Removed: {removed_fruit}")  # apple (pop ต้องมีตัวแปรมารับค่าที่ดีดออกมา)
 print(fruits)  # ['pear', 'cherry', 'orange', 'grape', 'kiwi']
 
-removed_fruit = fruits.pop(1)    # Remove and return element at index 1
+removed_fruit = fruits.pop(1)    # Remove and return element at index 1 (pop index ตัวที่เราจะเอาออกมาตาม index)
 print(f"Removed: {removed_fruit}")  # cherry
 print(fruits)  # ['pear', 'orange', 'grape', 'kiwi']
 
