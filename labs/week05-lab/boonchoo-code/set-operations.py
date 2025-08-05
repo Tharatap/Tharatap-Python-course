@@ -28,6 +28,7 @@ print(f"Remaining fruits: {fruits}")
 set_a = {1, 2, 3, 4, 5}
 set_b = {4, 5, 6, 7, 8}
 
+
 print(f"Set A: {set_a}")
 print(f"Set B: {set_b}")
 
