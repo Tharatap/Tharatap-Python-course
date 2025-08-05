@@ -31,7 +31,7 @@ Available_for_Savings = Remaining_Income - Emergency_Fund_Amount - Investment_Am
 Expense_Ratio = (Total_Expenses / Monthly_income) * 100
 
 #output
-print("=== MONTHLY BUDGET REPORT ===")
+print("=== MONTHLY BUdGET REPORT ===")
 print("Income: ",Monthly_income," THB")
 print("Fixed Expenses: ",Total_Fixed_Expenses," THB")
 print("Variable Expenses: ",Total_Variable_Expenses," THB")
