@@ -1,4 +1,3 @@
-# อย่าพึ่งลบ มาอ่านซ้ำก่อน
 """
     สร้าง class Student โดยกำหนดให้
     - มี attribute ชื่อ name, age, และ student_id ที่เก็บข้อมูลทั่วไปของนักเรียน และ grades ที่เก็บคะแนนของนักเรียนในแต่ละวิชา โดยเป็นโครงสร้างข้อมูลประเภท list
@@ -20,21 +19,19 @@ class Student:
 
     # Method to add a grade
     def add_grade(self, grade):
-        if grade["grade"] >= 0 and grade["subject"] not in [g["subject"] for g in student.grades]:
-            self.grades.append(grade)
-        else:
-            print("Not sucsedd")
+        self.grades.append(grade)
+        
 
     # Method to get the average grade
     def get_average_grade(self):
-        grades_only = [g["grade"] for g in student.grades] 
-        avg = sum(grades_only) / len(grades_only)
+        sume = 0 
+        for g in self.grades:
+            sume += g["grade"]   
+        avg = sume / len(self.grades)
         return f"{self.name}:  average grade : {avg}"
 
     # Method to get the grade report
     def get_grade_report(self):
-        #subject = [g["subject"] for g in student.grades]
-        #return subject
          return f"{self.name}: {self.grades}"
 
 
@@ -49,12 +46,6 @@ student.add_grade(
     {
         "subject": "Science",
         "grade": 92
-    }
-)
-student.add_grade(
-    {
-        "subject":"Math",
-        "grade": 10
     }
 )
 print(student.get_average_grade())  # Should print 88.5
