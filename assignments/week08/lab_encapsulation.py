@@ -23,10 +23,10 @@ class Rectangle:
         else:
             return f"it's a not square"
 
-x = Rectangle(10,20)
-print(x.calculate_area())
-print(x.perimeter())
-print(x.check_square())
+square = Rectangle(10,20)
+print(square.calculate_area())
+print(square.perimeter())
+print(square.check_square())
 
         
         
