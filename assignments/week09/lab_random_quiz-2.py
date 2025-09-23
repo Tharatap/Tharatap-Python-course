@@ -58,8 +58,10 @@ def get_divisibility_hint(number):
 
 def get_range_hint(number, current_min=1, current_max=100):
     # ใช้ขอบล่างเป็น = number-10    ขอบบนเป็น =  number +15 
+    #ขอบล่าง
     if number > 0 and number >= 10: # ถ้าเป็นเลข หลักหน่วยมันจะลบ 10 เป็นขอบล่างติดลบไม่ได้ 
         current_min = number -10
+    #ขอบบน
     if number <= 85: # ถ้าเป็นเลข 90 กว่าๆมันจะเกินร้อยไม่ได้
         current_max = number + 15
     print(f"range: {current_min} - {current_max}") 
