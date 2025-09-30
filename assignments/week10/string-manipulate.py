@@ -47,3 +47,34 @@ Transformations:
 USE: len(), split(), count(), upper(), lower(), title(), slicing operations
 
 """
+def character_Analysit(text):
+    text_space = len(text) # นับคำรวมช่องว่าง
+    text = text.replace(" ","") # ตัดช่องว่างทิ้ง
+    text_out_space = len(text) # นับคำไม่รวมช่องว่าง
+    text = text.lower()
+    # นับสระพยัญชนะ
+    count_vowels = 0
+    vowels = []
+    consonants = 0
+    for i in text:
+        if i == 'a' or i =='e' or i == 'i' or i == 'o' or i == 'u':
+            count_vowels += 1
+            vowels.append(i) # add vowels to list
+        else:
+            consonants +=1
+    
+    return text_space,text_out_space,vowels,count_vowels,consonants
+
+def Word_Analysis(text):
+    #นับคำ
+    total_words = len(text.split()) # นับจำนวนว่ามีกี่คำ
+    long_word = 0
+    short_word = 0
+    for i in text.split():
+        if i
+
+
+
+text = "The Quick Brown Fox Jumps Over The Lazy Dog"
+text_space, text_out_space , vowels, consonants = character_Analysit(text)
+print(text_space,text_out_space,vowels,consonants)
