@@ -26,11 +26,12 @@ class BankAccount:
         return False
     
     # Property decorator for read-only access
-    @property
+    
+    @property # เอาไว้ดูค่าอย่างเดียว
     def transaction_history(self):
         return self.__transaction_history.copy()
     
-    def __str__(self):
+    def __str__(self): # ย่อมาจาก string ทำให้เรา print วัตถุจาก class ได้ print ผ่านชื่อวัตถุของ class ได้เลย
         return f"Account {self.account_number}: Balance ${self.__balance}"
 
 # Usage example
@@ -38,4 +39,5 @@ account = BankAccount("12345", 1000)
 print(account.get_balance())  # 1000
 account.deposit(500)
 account.withdraw(200)
-print(account)  # Account 12345: Balance $1300
+print(account)  # Account 12345: Balance $1300     (มันคือการ เรียกใช้ def __str__ แต่เราเรียกผ่านชื่อวัตถุได้เลย)
+#print(account.transaction_history) เรียก transaction_history มาดูต้องเรียกผ่าน method เพราะเรา set ตัวแปร transaction_history ไว้เป็น private
