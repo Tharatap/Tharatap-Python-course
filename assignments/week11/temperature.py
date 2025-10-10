@@ -22,4 +22,25 @@ Highest: 28 C
 Lowest: 19 C
 
 """
-    
+#รับค่า
+def get_temperatures():
+    daily_tem = []
+    # รับข้อมูล จาก user ว่า
+    for i in range(0,7):
+        tem = float(input(f"Enter temperature day[{i+1}]: "))
+        daily_tem.append(tem)
+    return daily_tem
+# คำนวณโจทย์
+def analyze_temps(temp_list):
+    avg = sum(temp_list) / len(temp_list)
+    high_temp = max(temp_list)
+    lowest_temp = min(temp_list)
+    return (avg,high_temp,lowest_temp)
+#show output
+def display_analysis(avg,high,low):
+    print(f"Temperature Analysis for the Week: ")
+    print(f"Average: {avg:.2f} c")
+    print(f"Highest: {high:.2f} c")
+    print(f"Lowest: {low:.2f} c")
+avg,high,low = analyze_temps(get_temperatures()) # function analyze_temps ไปรับ parameter จาก get_temperatures ได้เลยเพราะ return มาเป็น list ละ
+display_analysis(avg,high,low)
