@@ -1,1 +1,1 @@
-print(range(20,50))
+print("wow")
